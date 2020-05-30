@@ -1,0 +1,45 @@
+PROJECT 1: www.bijouxpieces.com
+
+1. COLLECTING DATA
+
+    www.wonatrading.com  website to be scraped – this process needs to be automated to be run once a week as they are new products added once a week.
+    What needs to be taken from the website is: 
+
+    a) CATERGORIES
+    b) LEVEL 1 CATERGORIES
+    c) LEVEL 2 CATERGORIES
+    d) PRODUCT NAME
+    e) IMAGE LINK (Sometimes there can be 2 images that needs to be accounted for)
+    f) DESCRIPTION
+    g) PRICE
+    EXAMPLE:
+    JEWELRY > ANKLET > FASHION > STARFISH RHINESTONE LAYERED ANKLET > https://www.wonatrading.com/images/20200305/AK022-@GD-CRY@1H-8_15L@478951@375@01.jpg / https://www.wonatrading.com/images/20200305/des_img/AK022-@GD-CRY@1H-8_15L@478951@375@01@1.jpg > • Style No : 478951
+    • Color : Gold
+    • Theme : Sea Life, Starfish
+    • Size : 1"H, 8" + 1.5"L
+    • One Side Only
+    • Lead and Nickel Compliant
+    • Made In Korea
+    • Starfish Rhinestone Layered Anklet >  $3.75/pc / $40.50/dz
+
+    This  data needs to be entered into a table or database .
+
+2. COMBINE ANY PRODUCTS THAT ARE THE SAME  BUT JUST DIFFERENT COLORS.
+
+    EXAMPLE:
+    STARFISH RHINESTONE LAYERED ANKLET: THERE ARE 2 PRODUCTS THAT HAVE THE SAME PRODUCT NAME  BUT DIFFERENT ID NUMBERS(478951, 478952) , DIFFERENT COLORS(gold , rhodium)
+    AND DIFFERENT IMAGE LINKS BUT NEED TO BE COMBINED BECAUSE THEY ARE VARIANTS OF EACH
+
+3. CLEAN DATA
+
+    General clean, check for spelling, casing, remove an extra space etc.
+    Description: remove style number (put it into its own separate column), where it’s made and product name. 
+    Price: remove the dollar sign and /pc, /dz . the price will need the original price and in a separate column price *2
+
+4. DATA NEEDS TO BE ORGANIZED INTO BIG COMMERCES CSV TEMPLATE FORM OR API READY
+
+    API DOCUMENTATION: https://developer.bigcommerce.com/api-docs
+    BULK UPLOAD DOCUMENTATION: https://support.bigcommerce.com/s/article/Importing-Exporting-Products#product-import
+    Everyone needs to make sure they document there code and on Trello, its important to work together and communicate with each other.
+    Any issue please let me know and feel free to ask me any questions if you need help or get stuck.
+    It is also important that everyone acknowledges to work with integrity.
