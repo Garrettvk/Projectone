@@ -1,13 +1,15 @@
 # Pandas is an open source library that is used to analyze data in Python.
 import pandas as pd
 
+from file_split import file_split
+
 # 2 lists containing the field names for input an outputs
 output_fields = ['Product Name', 'Category','Product Image File - 1','Product Image File - 2','Product Description','Price']
 
 input_fields = ['productname','category','image1','image2','description','price',]
 
 # open file
-input_csv = pd.read_csv('C:/Users/Garrett/Desktop/projectone slack files/Tables/output.csv')
+input_csv = file_split()
 
 # 1st column of 'No Variant Template.xlsx'
 # name of each column for No Variant Template
@@ -221,5 +223,5 @@ output_df = pd.DataFrame(
     )
 
 # write dataframe to csv file
-output_df.to_csv('please.csv', index=False)
+output_df.to_csv('C:/Users/Garrett/Desktop/projectone slack files/Tables/no variant.csv', index=False)
     
