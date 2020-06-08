@@ -1,10 +1,3 @@
-"""
-turn entire file into a function
-
-loop over each product and call the function on that product
-
-put csv writer in append mode
-"""
 # Pandas is an open source library that is used to analyze data in Python.
 import pandas as pd
 
@@ -16,8 +9,8 @@ input_fields = ['productname','category','image1','image2','description','price'
 # open file
 input_csv = pd.read_csv('C:/Users/Garrett/Desktop/projectone slack files/Tables/output.csv')
 
-
 # 1st column of 'No Variant Template.xlsx'
+# name of each column for No Variant Template
 fields = [
     'Item Type',
     'Product ID',
@@ -100,6 +93,7 @@ fields = [
 ]
 
 # 3rd column of 'No Variant Template.xlsx'
+# default values for No Variant Template
 example = [
     'Product',
     '',
@@ -187,11 +181,13 @@ template = pd.DataFrame(
     columns=fields # columns for DataFrame 
     )
 
+# the number of products or rows
 number_of_rows = len(input_csv)
 
+# this list will be used for the data of output_df
 output_list = []
 
-for row in range(number_of_rows):             # for each row in dataframe
+for row in range(number_of_rows): # for each row in dataframe
     """
     Compress Categories
     """
@@ -209,13 +205,13 @@ for row in range(number_of_rows):             # for each row in dataframe
         # if iterating over category, combine all 3 categories       
         if field == 'Category':
             template[field] = Category
-        else:     
+        else:
+            # each cell of input data frame
             input_field = input_csv[input_fields[i]].loc[row]
-            template[field] = input_field
+            # template cell = input cell
+            template[field] = input_field    
 
-    
-
-    # write DataFrames to individual csv files
+    # append each row of template dataframe to output_list
     output_list.append(template.iloc[0])
 
 # DataFrame for 'No Variant Template.xlsx'
@@ -224,5 +220,6 @@ output_df = pd.DataFrame(
     columns=fields # columns for DataFrame 
     )
 
+# write dataframe to csv file
 output_df.to_csv('please.csv', index=False)
     
