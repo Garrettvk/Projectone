@@ -1,5 +1,11 @@
-return unique data frame from file split
+no variant.csv
 
-make sure to use 
-  df = df.reset_index(drop=True)
-  https://stackoverflow.com/questions/20490274/how-to-reset-index-in-a-pandas-dataframe
+  How do I find info about Option Set
+
+  Product Custom Fields
+    needs to match color in description
+  
+  Description needs to be cleaned
+  Price Needs To be cleaned
+  Cost Price doesn't match up with price
+
