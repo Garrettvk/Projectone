@@ -1,1 +1,5 @@
-output.csv is the data that we're getting from the web scraper and we need to split the prducts into variance and unique.
+return unique data frame from file split
+
+make sure to use 
+  df = df.reset_index(drop=True)
+  https://stackoverflow.com/questions/20490274/how-to-reset-index-in-a-pandas-dataframe
