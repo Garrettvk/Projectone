@@ -5,7 +5,6 @@ no variant.csv
   Product Custom Fields
     needs to match color in description
   
-  Description needs to be cleaned
   Price Needs To be cleaned
   Cost Price doesn't match up with price
 
