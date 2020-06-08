@@ -9,3 +9,5 @@ no variant.csv
   Price Needs To be cleaned
   Cost Price doesn't match up with price
 
+  add domain to image links
+
