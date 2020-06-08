@@ -4,6 +4,7 @@ import pandas as pd
 from file_split import file_split
 from clean_description import clean_description
 from clean_price import clean_price
+from add_domain_to_image_links import add_domain_to_image_links
 
 # 2 lists containing the field names for input an outputs
 output_fields = ['Product Name', 'Category','Product Image File - 1','Product Image File - 2','Product Description','Price']
@@ -217,6 +218,12 @@ for row in range(number_of_rows): # for each row in dataframe
         elif field == 'Price':
             price = input_csv['price'].loc[row]
             template[field] = clean_price(price)
+        elif field == 'Product Image File - 1':
+            image_url = input_csv['image1'].loc[row]
+            template[field] = add_domain_to_image_links(image_url)          
+        elif field == 'Product Image File - 2':
+            image_url = input_csv['image2'].loc[row]
+            template[field] = add_domain_to_image_links(image_url) 
         else:
             # each cell of input data frame
             input_field = input_csv[input_fields[i]].loc[row]
