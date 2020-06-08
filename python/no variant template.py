@@ -2,6 +2,7 @@
 import pandas as pd
 
 from file_split import file_split
+import clean_description
 
 # 2 lists containing the field names for input an outputs
 output_fields = ['Product Name', 'Category','Product Image File - 1','Product Image File - 2','Product Description','Price']
