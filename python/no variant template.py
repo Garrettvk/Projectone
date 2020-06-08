@@ -2,7 +2,7 @@
 import pandas as pd
 
 from file_split import file_split
-import clean_description
+from clean_description import clean_description
 
 # 2 lists containing the field names for input an outputs
 output_fields = ['Product Name', 'Category','Product Image File - 1','Product Image File - 2','Product Description','Price']
@@ -208,6 +208,11 @@ for row in range(number_of_rows): # for each row in dataframe
         # if iterating over category, combine all 3 categories       
         if field == 'Category':
             template[field] = Category
+        elif field == 'Product Description':
+            # create variables for name and descrition of product
+            productname, description = input_csv['productname'].loc[row], input_csv['description'].loc[row]
+            # the template description field = the return of function call
+            template[field] = clean_description(productname, description) 
         else:
             # each cell of input data frame
             input_field = input_csv[input_fields[i]].loc[row]
