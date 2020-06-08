@@ -14,7 +14,7 @@ output_fields = ['Product Name', 'Category','Product Image File - 1','Product Im
 input_fields = ['productname','category','image1','image2','description','price',]
 
 # open file
-input_csv = pd.read_csv('Tables/output.csv')
+input_csv = pd.read_csv('C:/Users/Garrett/Desktop/projectone slack files/Tables/output.csv')
 
 
 # 1st column of 'No Variant Template.xlsx'
